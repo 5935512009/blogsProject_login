@@ -32,6 +32,7 @@ const validate = (data) =>{
         email:joi.string().email().required().label("Email"),
         password:joi.string().required().label("Password")
     })
+    return schema.validate(data); // Return the validation result
 }
 
 

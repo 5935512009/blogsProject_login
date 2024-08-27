@@ -1,0 +1,79 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+    box-shadow: 0 1px 3px -2px black;
+    background: white;
+    transition-duration: 1s;
+  }
+
+  .nav-menu .nav-list {
+    display: flex;
+    padding: 2px;
+    margin-right: 10px;
+    list-style: none;
+    justify-content: space-between;
+    gap: 20px;
+    cursor: pointer;
+    margin-left: auto;
+    transition-duration: 1s;
+    transition-delay: 2s;
+  }
+  .nav-menu .nav-list li {
+    padding: 3px;
+  }
+  .nav-menu .nav-list hr{
+    background-color: rgb(162, 162, 235);
+    border: none;
+    width: 80%;
+    height: 2px;
+    border-radius: 1px;
+    
+  }
+  .nav-menu .nav-list li:hover {
+    width: 100%;
+    height: auto;
+    font-weight: 400;
+    background: rgb(213, 213, 228);
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    
+  } 
+  .nav-menu .nav-list li a {
+    text-decoration: none; /* เอา underline ออก */
+    color: inherit; /* ให้ลิงก์ใช้สีตามที่ตั้งไว้ใน CSS */
+  }
+  
+  .nav-menu .nav-list li a:hover {
+    text-decoration: none; /* เอา underline ออกเมื่อเมาส์ hover */
+  }
+  
+  .nav-menu .nav-list hr{
+    background-color: rgb(162, 162, 235);
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 2px ;
+  }
+  
+  
+  @media screen and (max-width: 865px) {
+    .navbar {
+      background-color: rgb(245, 227, 227);
+      transition-duration: 1s;
+      width: 865px;
+    }
+    
+  }
+  
+  @media screen and (max-width: 400px){
+    .App{
+      width: 400px;
+      height: 100%;
+    }
+  }
+  
+  
