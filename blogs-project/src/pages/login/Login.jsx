@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
+import './login.css'
 
 const Login = () => {
 	const [data, setData] = useState({ email: "", password: "" });
@@ -30,10 +30,10 @@ const Login = () => {
 	};
 
 	return (
-		<div className="">
-			<div className="">
-				<div className="">
-					<form className="" onSubmit={handleSubmit}>
+		<div className="login-page">
+			<div className="login-path">
+				<div className="login-top">
+					<form className="login-form" onSubmit={handleSubmit}>
 						<h1>Login to Your Account</h1>
 						<input
 							type="email"
@@ -53,13 +53,14 @@ const Login = () => {
 							required
 							className=""
 						/>
+						<br/>
 						{error && <div className="">{error}</div>}
 						<button type="submit" className="">
 							Sing In
 						</button>
 					</form>
 				</div>
-				<div className="">
+				<div className="login-bottom">
 					<h1>New Here ?</h1>
 					<Link to="/Register">
 						<button type="button" className="">
