@@ -1,0 +1,32 @@
+.home{
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 100vh;
+}
+.home .bayBook{
+    padding: 40px;
+    flex-direction:column;
+    text-align: center;
+    width: 40%;
+    border: 3px solid gray;
+    border-radius: 10px;
+}
+.home .bayBook button{
+    background-color: #e62517;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.home .bayBook button:hover{
+    background-color: #be261b;
+    box-shadow: 0 4px 10px rgba(41, 128, 185, 0.2);
+}
