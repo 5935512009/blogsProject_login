@@ -4,7 +4,6 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    
     box-shadow: 0 1px 3px -2px black;
     background: white;
     transition-duration: 1s;
@@ -16,6 +15,7 @@
     margin-right: 10px;
     list-style: none;
     justify-content: space-between;
+    align-items: center;
     gap: 20px;
     cursor: pointer;
     margin-left: auto;
@@ -23,23 +23,35 @@
     transition-delay: 2s;
   }
   .nav-menu .nav-list li {
+
     padding: 3px;
+    font-weight: 500;
+    transition-duration: 0.5s;
   }
-  .nav-menu .nav-list hr{
-    background-color: rgb(162, 162, 235);
+  .nav-menu .nav-list li  button{
+    background-color: #e62517;
     border: none;
-    width: 80%;
-    height: 2px;
-    border-radius: 1px;
-    
-  }
-  .nav-menu .nav-list li:hover {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
     width: 100%;
-    height: auto;
-    font-weight: 400;
-    background: rgb(213, 213, 228);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .nav-menu .nav-list li  button:hover{
+    background-color: #be261b;
+    box-shadow: 0 4px 10px rgba(41, 128, 185, 0.2);
+  }
+
+
+  .nav-menu .nav-list li:hover {
+    color: rgb(19, 19, 32);
     border-radius: 10px;
     transition-duration: 0.5s;
+    text-decoration: underline;
+
     
   } 
   .nav-menu .nav-list li a {
@@ -51,14 +63,7 @@
     text-decoration: none; /* เอา underline ออกเมื่อเมาส์ hover */
   }
   
-  .nav-menu .nav-list hr{
-    background-color: rgb(162, 162, 235);
-    border: none;
-    width: 80%;
-    height: 3px;
-    border-radius: 2px ;
-  }
-  
+
   
   @media screen and (max-width: 865px) {
     .navbar {
