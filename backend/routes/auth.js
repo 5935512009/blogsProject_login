@@ -21,7 +21,14 @@ router.post("/",async(req,res)=>{
             return res.status(401).send({message:"Invalid"})
         }
         const token = user.generateAuthToken();
-        res.status(200).send({data:token,message:"Logged in successFully"})
+        res.status(200).send({
+            data:token,
+            user:{
+                firstName:user.firstName,
+                lastName: user.lastName,
+                email: user.email,
+            },
+            message:"Logged in successFully"})
     } catch (error) {
         
     }
