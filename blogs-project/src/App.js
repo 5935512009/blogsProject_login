@@ -16,7 +16,7 @@ function App() {
           <Routes>
             {user && <Route path='/' element={<ProtectedRoute element={Home} />} />}
             <Route path='/home' element={<ProtectedRoute element={Home} />} />
-            <Route path='/blogs'  element={<Blogs/>}/>
+            <Route path='/blogs'  element={<ProtectedRoute element={Blogs} />}/>
             <Route path='/login'  element={<Login/>}/>
             <Route path='/register'  element={<Register/>}/>
           </Routes>
