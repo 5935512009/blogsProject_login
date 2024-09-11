@@ -16,7 +16,14 @@ const Login = () => {
 		try {
 			const url = "http://localhost:4001/api/auth";
 			const { data: res } = await axios.post(url, data);
-			localStorage.setItem("token", res.data); // token
+	
+			// เก็บข้อมูล response ใน localStorage console.log check ในหน้า Home.jsx
+			localStorage.setItem("loginResponse", JSON.stringify(res));
+	
+			// เก็บ token และ user
+			localStorage.setItem("token", res.data);
+			localStorage.setItem("user", JSON.stringify(res.user));
+	
 			window.location = "/";
 		} catch (error) {
 			if (
@@ -28,6 +35,7 @@ const Login = () => {
 			}
 		}
 	};
+	
 
 	return (
 		<div className="login-page">
