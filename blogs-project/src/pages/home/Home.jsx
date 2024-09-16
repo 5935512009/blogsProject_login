@@ -31,7 +31,12 @@ export default function Home() {
     <div className='home'>
       <div className='bayBook'>
         {/* แสดงชื่อผู้ใช้ ถ้ามี */}
-        {user ? <span>Welcome, {user.firstName}</span> : <span>Loading...</span>}
+        {user ? 
+        <div className='blog-details'>
+          <span>Welcome, {user.firstName}</span>
+          <span>email: {user.email}</span>
+        </div>
+        : <span>Loading...</span>}
         <button className='logout' onClick={handleLogout}>Logout</button>
       </div>
     </div>
